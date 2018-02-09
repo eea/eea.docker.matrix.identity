@@ -24,7 +24,7 @@ dns.overwrite.homeserver.client:
       fi
 
 
-      if [[ -n "$ldap.connection.host" ]]; then
+      if [[ -n "${LDAP_HOST}" ]]; then
           echo "Setting LDAP"
           echo "ldap.enabled: true
 ldap.connection.host: '${LDAP_HOST}'
