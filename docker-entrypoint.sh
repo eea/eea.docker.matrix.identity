@@ -42,6 +42,21 @@ ldap.attribute.name: 'cn' "  >> "$CONF_FILE_PATH"
            fi
       fi
 
+      if  [[ -n "${SMTP_HOST}" ]]; then
+          echo "threepid:
+  medium:
+    email:
+      identity:
+        from: '${IDENTITY_EMAIL_FROM}'
+        name: 'Matrix Identity server'
+      connectors:
+        smtp:
+          host: '${SMTP_HOST}'
+          port: ${SMTP_PORT}
+          tls: 0
+"  >> "$CONF_FILE_PATH"
+      fi     
+
       echo "Starting mxisd..."
       echo
   fi
