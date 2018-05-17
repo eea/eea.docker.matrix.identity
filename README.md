@@ -2,21 +2,17 @@
 
 Docker image for https://github.com/kamax-io/mxisd with added EEA LDAP configurations.
 
-
 ## Supported tags and respective Dockerfile links
 
  - [Tags](https://hub.docker.com/r/eeacms/matrix-mxisd/tags/)
-
 
 ## Base docker image
 
  - [eeacms/matrix-mxisd](https://hub.docker.com/r/eeacms/matrix-mxisd/)
 
-
 ## Source code
 
  - [eea/eea.docker.matrix.mxisd](http://github.com/eea/eea.docker.matrix.mxisd)
-
 
 ## Usage
 
@@ -41,7 +37,6 @@ Example docker-compose:
       LDAP_TLS: 'true'
 ```
 
-
 ## Supported environment variables
 
 * `MATRIX_DOMAIN` - The public url of matrix, used in federation and under which every user is saved
@@ -53,7 +48,6 @@ Example docker-compose:
 * `LDAP_FILTER` - Filter for LDAP users
 * `LDAP_BASEDN` - LDAP BASE DN to give access to users
 * `JAVA_OPTS` - Extra Java OPTS
-
 
 ## Copyright and license
 
