@@ -15,7 +15,7 @@ Docker image for https://github.com/kamax-io/mxisd with added EEA LDAP configura
 
 ## Source code
 
- - [github.com](http://github.com/eea/eea.docker.matrix.mxisd)
+ - [eea/eea.docker.matrix.mxisd](http://github.com/eea/eea.docker.matrix.mxisd)
 
 
 ## Usage
