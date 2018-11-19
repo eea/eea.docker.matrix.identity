@@ -72,6 +72,8 @@ synapseSql:
       fi
 
 
+
+      cat $CONF_FILE_PATH
       echo "Starting mxisd..."
       echo
   fi
