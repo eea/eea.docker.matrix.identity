@@ -57,7 +57,7 @@ ldap.attribute.name: 'cn' "  >> "$CONF_FILE_PATH"
       generators:
         template:
           generic:
-            matrixId:  '/etc/mxisd/invite-template.eml'"  >> "$CONF_FILE_PATH"
+            matrixId:  '/etc/mxisd/mxid-template.eml'"  >> "$CONF_FILE_PATH"
       fi     
 
      if  [[ -n "${HOMESERVER_MXISD_TOKEN}" ]]; then
@@ -76,7 +76,7 @@ synapseSql:
       fi
 
       if [[ -n "${MXISD_RIOT_URL}" ]]; then
-	      sed "s#MXISD_RIOT_URL#$MXISD_RIOT_URL#g" /templates/invite-template.eml > /etc/mxisd/invite-template.eml
+	      sed "s#MXISD_RIOT_URL#$MXISD_RIOT_URL#g" /templates/mxid-template.eml > /etc/mxisd/mxid-template.eml
       fi
 
       cat $CONF_FILE_PATH
