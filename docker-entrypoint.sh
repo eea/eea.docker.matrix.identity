@@ -48,7 +48,7 @@ ldap.attribute.name: 'cn' "  >> "$CONF_FILE_PATH"
     email:
       identity:
         from: '${IDENTITY_EMAIL_FROM}'
-        name: 'Matrix Identity server'
+        name: '${IDENTITY_EMAIL_NAME}'
       connectors:
         smtp:
           host: '${SMTP_HOST}'
