@@ -62,11 +62,10 @@ pre, code {
 
 <p>%SENDER_NAME_OR_ID% invites you to the following secure EEA chat room:</p>
 
-<p>Room name: %ROOM_NAME%</p>
-<p>Room URL: <a href="MXISD_RIOT_URL/#/room/%ROOM_ID%">MXISD_RIOT_URL/#/room/%ROOM_ID%</a> (login with your Eionet account)</p>
-<br/>
+<p>Room name: %ROOM_NAME%<br/>
+Room URL: <a href="MXISD_RIOT_URL/#/room/%ROOM_ID%">MXISD_RIOT_URL/#/room/%ROOM_ID%</a> (login with your Eionet account)</p>
 <p>Enjoy EEA Riot!</p>
-<p>MXISD_RIOT_URL</p>
+<p><a href="MXISD_RIOT_URL">MXISD_RIOT_URL</a></p>
 <p>When privacy matters!</p>
                 </td>
                 <td> </td>
