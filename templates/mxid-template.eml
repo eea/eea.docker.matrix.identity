@@ -1,0 +1,79 @@
+Subject: %SENDER_NAME_OR_ID% invites you to chat in %ROOM_NAME_OR_ID%
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="7REaIwWQCioQ6NaBlAQlg8ztbUQj6PKJ"
+
+--7REaIwWQCioQ6NaBlAQlg8ztbUQj6PKJ
+Content-Type: text/plain; charset=UTF-8
+Content-Disposition: inline
+
+Hello!
+
+%SENDER_NAME_OR_ID% invites you to the following secure EEA chat room:
+
+Room name: %ROOM_NAME%
+Room URL: MXISD_RIOT_URL/#/room/%ROOM_ID% (login with your Eionet account)
+
+Enjoy EEA Riot!
+MXISD_RIOT_URL
+When privacy matters!
+
+--7REaIwWQCioQ6NaBlAQlg8ztbUQj6PKJ
+Content-Type: multipart/related;
+	boundary="M3yzHl5YZehm9v4bAM8sKEdcOoVnRnKR";
+	type="text/html"
+
+--M3yzHl5YZehm9v4bAM8sKEdcOoVnRnKR
+Content-Type: text/html; charset=UTF-8
+Content-Disposition: inline
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <style type="text/css">
+body {
+    margin: 0px;
+}
+
+pre, code {
+    word-break: break-word;
+    white-space: pre-wrap;
+}
+
+#page {
+    font-family: 'Open Sans', Helvetica, Arial, Sans-Serif;
+    font-color: #454545;
+    font-size: 12pt;
+    width: 100%%;
+    padding: 20px;
+}
+
+#inner {
+    width: 640px;
+}
+        </style>
+    </head>
+    <body>
+        <table id="page">
+            <tr>
+                <td> </td>
+                <td id="inner">
+<p>Hello,</p>
+
+<p>%SENDER_NAME_OR_ID% invites you to the following secure EEA chat room:</p>
+
+<p>Room name: %ROOM_NAME%</p>
+<p>Room URL: MXISD_RIOT_URL/#/room/%ROOM_ID% (login with your Eionet account)</p>
+<br/>
+<p>Enjoy EEA Riot!</p>
+<p>MXISD_RIOT_URL</p>
+<p>When privacy matters!</p>
+                </td>
+                <td> </td>
+            </tr>
+        </table>
+    </body>
+</html>
+--M3yzHl5YZehm9v4bAM8sKEdcOoVnRnKR--
+
+--7REaIwWQCioQ6NaBlAQlg8ztbUQj6PKJ--

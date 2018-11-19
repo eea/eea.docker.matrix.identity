@@ -3,5 +3,8 @@ LABEL maintainer="EEA: IDM2 A-Team <eea-edw-a-team-alerts@googlegroups.com>"
 
 COPY docker-entrypoint.sh /
 
+COPY templates /
+
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["/mxisd.jar"]

@@ -54,7 +54,10 @@ ldap.attribute.name: 'cn' "  >> "$CONF_FILE_PATH"
           host: '${SMTP_HOST}'
           port: ${SMTP_PORT}
           tls: 0
-"  >> "$CONF_FILE_PATH"
+      generators:
+        template:
+          generic:
+	    matrixId:  '/etc/mxisd/invite-template.eml'"  >> "$CONF_FILE_PATH"
       fi     
 
      if  [[ -n "${HOMESERVER_MXISD_TOKEN}" ]]; then
@@ -72,7 +75,9 @@ synapseSql:
   connection: '//db/${POSTGRES_DBNAME}?user=${POSTGRES_DBUSER}&password=${POSTGRES_DBPASS}'" >> "$CONF_FILE_PATH"
       fi
 
-
+      if [[ -n "${MXISD_RIOT_URL}" ]]; then
+	      sed "s#MXISD_RIOT_URL#$MXISD_RIOT_URL#g" /templates/invite-template.eml > /etc/mxisd/invite-template.eml
+      fi
 
       cat $CONF_FILE_PATH
       echo "Starting mxisd..."
