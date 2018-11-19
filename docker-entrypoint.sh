@@ -57,6 +57,21 @@ ldap.attribute.name: 'cn' "  >> "$CONF_FILE_PATH"
 "  >> "$CONF_FILE_PATH"
       fi     
 
+     if  [[ -n "${HOMESERVER_MXISD_TOKEN}" ]]; then
+          echo "matrix:
+  listener:
+    url:  'http://matrix:8090'
+    localpart: 'appservice-mxisd'
+    token:
+      hs: '${HOMESERVER_MXISD_TOKEN}'
+
+synapseSql:
+  enabled: false ## Do not use this line if Synapse is used as an Identity Store
+  type: 'postgresql'
+  connection: '//db/${POSTGRES_DBNAME}?user=${POSTGRES_DBUSER}&password=${POSTGRES_DBPASS}'" >> "$CONF_FILE_PATH"
+      fi
+
+
       echo "Starting mxisd..."
       echo
   fi
