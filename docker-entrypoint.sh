@@ -64,6 +64,7 @@ ldap.attribute.name: 'cn' "  >> "$CONF_FILE_PATH"
     localpart: 'appservice-mxisd'
     token:
       hs: '${HOMESERVER_MXISD_TOKEN}'
+      as: '${HOMESERVER_MXISD_AS_TOKEN}'
 
 synapseSql:
   enabled: false ## Do not use this line if Synapse is used as an Identity Store
