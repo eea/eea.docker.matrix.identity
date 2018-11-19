@@ -64,9 +64,9 @@ pre, code {
 
 <p>Room name: %ROOM_NAME%<br/>
 Room URL: <a href="MXISD_RIOT_URL/#/room/%ROOM_ID%">MXISD_RIOT_URL/#/room/%ROOM_ID%</a> (login with your Eionet account)</p>
-<p>Enjoy EEA Riot!</p>
-<p><a href="MXISD_RIOT_URL">MXISD_RIOT_URL</a></p>
-<p>When privacy matters!</p>
+<p>Enjoy EEA Riot!<br/>
+<a href="MXISD_RIOT_URL">MXISD_RIOT_URL</a><br/>
+When privacy matters!</p>
                 </td>
                 <td> </td>
             </tr>
