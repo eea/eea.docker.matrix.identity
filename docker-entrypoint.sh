@@ -57,7 +57,7 @@ ldap.attribute.name: 'cn' "  >> "$CONF_FILE_PATH"
       generators:
         template:
           generic:
-	    matrixId:  '/etc/mxisd/invite-template.eml'"  >> "$CONF_FILE_PATH"
+            matrixId:  '/etc/mxisd/invite-template.eml'"  >> "$CONF_FILE_PATH"
       fi     
 
      if  [[ -n "${HOMESERVER_MXISD_TOKEN}" ]]; then
