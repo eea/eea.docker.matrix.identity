@@ -53,7 +53,7 @@ ldap.attribute.name: 'cn' "  >> "$CONF_FILE_PATH"
         smtp:
           host: '${SMTP_HOST}'
           port: ${SMTP_PORT}
-          tls: 0
+          tls: 1
       generators:
         template:
           generic:
