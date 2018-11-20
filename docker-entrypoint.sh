@@ -79,7 +79,6 @@ synapseSql:
 	      sed "s#MXISD_RIOT_URL#$MXISD_RIOT_URL#g" /templates/mxid-template.eml > /etc/mxisd/mxid-template.eml
       fi
 
-      cat $CONF_FILE_PATH
       echo "Starting mxisd..."
       echo
   fi

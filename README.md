@@ -49,6 +49,24 @@ Example docker-compose:
 * `LDAP_BASEDN` - LDAP BASE DN to give access to users
 * `JAVA_OPTS` - Extra Java OPTS
 
+### To configure email
+
+* `IDENTITY_EMAIL_FROM` - Invitation sending sender address
+* `IDENTITY_EMAIL_NAME` - Invitation sending sender name
+* `SMTP_HOST` - Used SMTP_HOST
+* `SMTP_PORT` - Used SMTP_PORT
+* `MXISD_RIOT_URL` - Url used in invitation to Riot Web
+
+### To configure Integration as an Application Service
+
+This is used to be able to send invitation emails to users that have not yet logged in. All the variables values must be the same as used on the Matrix homeserver.
+
+* `HOMESERVER_MXISD_TOKEN` - Matrix synapse appservice-mxisd HS token
+* `HOMESERVER_MXISD_AS_TOKEN` - Matrix synapse appservice-mxisd AS token
+* `POSTGRES_DBNAME` - Matrix synapse database name
+* `POSTGRES_DBUSER` - Matrix synapse database user
+* `POSTGRES_DBPASS` - Matrix synapse database password
+
 ## Copyright and license
 
 The Initial Owner of the Original Code is European Environment Agency (EEA).
