@@ -1,4 +1,4 @@
-Subject: %SENDER_NAME_OR_ID% invites you to chat in %ROOM_NAME_OR_ID%
+Subject: %SENDER_NAME_OR_ID% invites you to chat %ROOM_NAME%
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
 	boundary="7REaIwWQCioQ6NaBlAQlg8ztbUQj6PKJ"
@@ -62,8 +62,8 @@ pre, code {
 
 <p>%SENDER_NAME_OR_ID% invites you to the following secure EEA chat room:</p>
 
-<p>Room name: %ROOM_NAME_OR_ID%<br/>
-Room URL: <a href="MXISD_RIOT_URL/#/room/%ROOM_ID%">MXISD_RIOT_URL/#/room/%ROOM_ID%</a> (login with your Eionet account)</p>
+<p>Room name: %ROOM_NAME_OR_ID%</p>
+<p>Room URL: <a href="MXISD_RIOT_URL/#/room/%ROOM_ID%">MXISD_RIOT_URL/#/room/%ROOM_ID%</a> (login with your Eionet account)</p>
 <p>Enjoy EEA Riot!<br/>
 <a href="MXISD_RIOT_URL">MXISD_RIOT_URL</a><br/>
 When privacy matters!</p>
