@@ -1,4 +1,4 @@
-FROM kamax/mxisd:1.2.0
+FROM kamax/mxisd:1.2.2
 LABEL maintainer="EEA: IDM2 A-Team <eea-edw-a-team-alerts@googlegroups.com>"
 
 COPY docker-entrypoint.sh /
