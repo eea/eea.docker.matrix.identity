@@ -9,7 +9,15 @@ if [ "$1" == "/start.sh" ]; then
           echo "Setting matrix domain to $MATRIX_DOMAIN"
           echo "matrix:" >> "$CONF_FILE_PATH"
           echo "  domain: '$MATRIX_DOMAIN'" >> "$CONF_FILE_PATH"
-          echo >> "$CONF_FILE_PATH" 
+          if  [[ -n "${HOMESERVER_MXISD_TOKEN}" ]]; then
+            echo "  listener:
+    url:  'http://matrix:8090'
+    localpart: 'appservice-mxisd'
+    token:
+      hs: '${HOMESERVER_MXISD_TOKEN}'
+      as: '${HOMESERVER_MXISD_AS_TOKEN}'" >> "$CONF_FILE_PATH"
+          fi
+	  echo >> "$CONF_FILE_PATH" 
           echo "dns:
   overwrite:
     homeserver:
@@ -75,14 +83,7 @@ if [ "$1" == "/start.sh" ]; then
       fi     
 
      if  [[ -n "${HOMESERVER_MXISD_TOKEN}" ]]; then
-          echo "matrix:
-  listener:
-    url:  'http://matrix:8090'
-    localpart: 'appservice-mxisd'
-    token:
-      hs: '${HOMESERVER_MXISD_TOKEN}'
-      as: '${HOMESERVER_MXISD_AS_TOKEN}'
-
+          echo "
 synapseSql:
   enabled: false ## Do not use this line if Synapse is used as an Identity Store
   type: 'postgresql'
