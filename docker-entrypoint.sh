@@ -7,9 +7,10 @@ if [ "$1" == "/start.sh" ]; then
 
       if [[ -n "$MATRIX_DOMAIN" ]]; then
           echo "Setting matrix domain to $MATRIX_DOMAIN"
-          echo "matrix:
-  domain: $MATRIX_DOMAIN
-dns:
+          echo "matrix:" >> "$CONF_FILE_PATH"
+          echo "  domain: '$MATRIX_DOMAIN'" >> "$CONF_FILE_PATH"
+          echo >> "$CONF_FILE_PATH" 
+          echo "dns:
   overwrite:
     homeserver:
       client:
