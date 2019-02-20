@@ -17,7 +17,7 @@ dns.overwrite.homeserver.client:
           echo "Setting signing key path to $SIGN_KEY_PATH"
           echo "key.path: $SIGN_KEY_PATH" >> "$CONF_FILE_PATH"
       fi
-
+      touch $SIGN_KEY_PATH
       if [[ -n "$SQLITE_DATABASE_PATH" ]]; then
           echo "Setting SQLite DB path to $SQLITE_DATABASE_PATH"
           echo "storage.provider.sqlite.database: $SQLITE_DATABASE_PATH" >> "$CONF_FILE_PATH"
