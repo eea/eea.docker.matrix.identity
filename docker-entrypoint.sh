@@ -23,7 +23,7 @@ if [ "$1" == "/start.sh" ]; then
     homeserver:
       client:
         - name: '$MATRIX_DOMAIN'
-    value: 'http://matrix:8008' " >> "$CONF_FILE_PATH"
+          value: 'http://matrix:8008' " >> "$CONF_FILE_PATH"
       fi
 
       if [[ -n "$SIGN_KEY_PATH" ]]; then
