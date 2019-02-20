@@ -7,4 +7,4 @@ COPY templates /templates
 
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["/mxisd.jar"]
+CMD ["/start.sh"]
