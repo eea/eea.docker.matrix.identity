@@ -83,7 +83,8 @@ synapseSql:
       echo
   fi
 
-  exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -Dspring.config.location=/etc/mxisd/ -Dspring.config.name=mxisd -jar /mxisd.jar
+  exec java $JAVA_OPTS -jar /app/mxisd.jar  -c "$CONF_FILE_PATH"
+
 fi
 
 exec "$@"
