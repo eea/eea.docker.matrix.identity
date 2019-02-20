@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ "$1" == "/start.sh" ]; then
-  if [[ -n "$CONF_FILE_PATH" ]] && [ ! -f "$CONF_FILE_PATH" ]; then
+  if [[ -n "$CONF_FILE_PATH" ]] ; then
       echo "Generating config file $CONF_FILE_PATH"
       touch "CONF_FILE_PATH"
 
@@ -83,6 +83,7 @@ synapseSql:
       echo
   fi
 
+  echo "test"
   exec java $JAVA_OPTS -jar /app/mxisd.jar  -c "$CONF_FILE_PATH"
 
 fi
