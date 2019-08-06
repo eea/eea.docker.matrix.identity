@@ -99,6 +99,7 @@ synapseSql:
   fi
 
   cat "$CONF_FILE_PATH"
+
   exec java $JAVA_OPTS -jar /app/mxisd.jar  -c "$CONF_FILE_PATH"
 
 fi
