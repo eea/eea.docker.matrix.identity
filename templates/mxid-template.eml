@@ -1,4 +1,4 @@
-Subject: =?UTF-8?Q?%SENDER_NAME_OR_ID% invites you to chat %ROOM_NAME%
+Subject: =%SENDER_NAME_OR_ID% invites you to chat %ROOM_NAME%
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
 	boundary="7REaIwWQCioQ6NaBlAQlg8ztbUQj6PKJ"
