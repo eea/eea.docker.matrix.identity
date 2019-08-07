@@ -17,7 +17,7 @@ appsvc:
   endpoint:
     toHS:
       url: 'http://matrix:8008'
-      token: '$(HOMESERVER_MXISD_TOKEN}'
+      token: '${HOMESERVER_MXISD_TOKEN}'
     toAS:
       url: 'http://identity:8090'
       token: '${HOMESERVER_MXISD_AS_TOKEN}'" >> "$CONF_FILE_PATH"
