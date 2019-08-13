@@ -10,15 +10,20 @@ if [ "$1" == "/start.sh" ]; then
           echo "matrix:" >> "$CONF_FILE_PATH"
           echo "  domain: '$MATRIX_DOMAIN'" >> "$CONF_FILE_PATH"
           if  [[ -n "${HOMESERVER_MXISD_TOKEN}" ]]; then
-            echo "  listener:
-    url:  'http://matrix:8090'
-    localpart: 'appservice-mxisd'
-    token:
-      hs: '${HOMESERVER_MXISD_TOKEN}'
-      as: '${HOMESERVER_MXISD_AS_TOKEN}'" >> "$CONF_FILE_PATH"
-          fi
-	  echo >> "$CONF_FILE_PATH" 
-          echo "dns:
+          
+echo "
+appsvc:
+  enabled: true
+  endpoint:
+    toHS:
+      url: 'http://matrix:8008'
+      token: '${HOMESERVER_MXISD_AS_TOKEN}'
+    toAS:
+      url: 'http://identity:8090'
+      token: '${HOMESERVER_MXISD_TOKEN}'" >> "$CONF_FILE_PATH"
+	  fi
+          echo "
+dns:
   overwrite:
     homeserver:
       client:
@@ -99,6 +104,7 @@ synapseSql:
   fi
 
   cat "$CONF_FILE_PATH"
+
   exec java $JAVA_OPTS -jar /app/mxisd.jar  -c "$CONF_FILE_PATH"
 
 fi
