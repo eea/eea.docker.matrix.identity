@@ -8,6 +8,7 @@ if [ "$1" == "/start.sh" ]; then
       if [[ -n "$MATRIX_DOMAIN" ]]; then
           echo "Setting matrix domain to $MATRIX_DOMAIN"
           echo "matrix:" >> "$CONF_FILE_PATH"
+	  echo "  v2: true" >> "$CONF_FILE_PATH"
           echo "  domain: '$MATRIX_DOMAIN'" >> "$CONF_FILE_PATH"
           if  [[ -n "${HOMESERVER_MXISD_TOKEN}" ]]; then
           
