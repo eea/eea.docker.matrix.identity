@@ -96,16 +96,16 @@ synapseSql:
       fi
 
       if [[ -n "${MXISD_RIOT_URL}" ]]; then
-	      sed "s#MXISD_RIOT_URL#$MXISD_RIOT_URL#g" /templates/mxid-template.eml > /etc/mxisd/mxid-template.eml
+	      sed "s#MXISD_RIOT_URL#$MXISD_RIOT_URL#g" /templates/mxid-template.eml > /etc/ma1sd/mxid-template.eml
       fi
 
       echo "Starting mxisd..."
       echo
   fi
 
-  cat "$CONF_FILE_PATH"
-
-  exec java $JAVA_OPTS -jar /app/mxisd.jar  -c "$CONF_FILE_PATH"
+  cat "$CONF_FILE_PATH" 
+  
+  exec java $JAVA_OPTS -jar /app/ma1sd.jar  -c "$CONF_FILE_PATH"
 
 fi
 
