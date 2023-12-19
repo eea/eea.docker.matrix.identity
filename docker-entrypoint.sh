@@ -86,7 +86,7 @@ dns:
       generators:
         template:
           generic:
-            matrixId:  '/etc/mxisd/mxid-template.eml'"  >> "$CONF_FILE_PATH"
+            matrixId:  '/etc/ma1sd/mxid-template.eml'"  >> "$CONF_FILE_PATH"
       fi     
 
      if  [[ -n "${HOMESERVER_MXISD_TOKEN}" ]]; then
