@@ -24,6 +24,8 @@ COPY --from=builder /ma1sd/build/libs/ma1sd.jar /app/ma1sd.jar
 
 LABEL maintainer="EEA: IDM2 A-Team <eea-edw-a-team-alerts@googlegroups.com>"
 
+RUN mdkir -p /etc/ma1sd
+
 COPY docker-entrypoint.sh /
 
 COPY templates /templates
