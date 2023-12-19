@@ -8,7 +8,10 @@ RUN git clone -b 2.5.0-eea https://github.com/eea/ma1sd.git /ma1sd \
 
 FROM openjdk:8-jre-alpine
 
-RUN apk update && apk add bash && rm -rf /var/lib/apk/* /var/cache/apk/*
+RUN mkdir -p /etc/ma1sd /var/ma1sd \
+     && apk update \
+     && apk add bash \
+     && rm -rf /var/lib/apk/* /var/cache/apk/*
 
 VOLUME /var/ma1sd
 EXPOSE 8090
@@ -23,8 +26,6 @@ COPY --from=builder /ma1sd/src/script/ma1sd /app/ma1sd
 COPY --from=builder /ma1sd/build/libs/ma1sd.jar /app/ma1sd.jar
 
 LABEL maintainer="EEA: IDM2 A-Team <eea-edw-a-team-alerts@googlegroups.com>"
-
-RUN mdkir -p /etc/ma1sd
 
 COPY docker-entrypoint.sh /
 
