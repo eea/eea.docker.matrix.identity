@@ -18,11 +18,8 @@ ENV CONF_FILE_PATH="/etc/ma1sd/ma1sd.yaml"
 ENV SIGN_KEY_PATH="/var/ma1sd/sign.key"
 ENV SQLITE_DATABASE_PATH="/var/ma1sd/ma1sd.db"
 
-CMD [ "/start.sh" ]
-
-ADD src/docker/start.sh /start.sh
-ADD src/script/ma1sd /app/ma1sd
-
+COPY --from=builder /ma1sd/ma1sd/src/docker/start.sh /start.sh
+COPY --from=builder /ma1sd/ma1sd/src/script/ma1sd /app/ma1sd
 COPY --from=builder /ma1sd/build/libs/ma1sd.jar /app/ma1sd.jar
 
 LABEL maintainer="EEA: IDM2 A-Team <eea-edw-a-team-alerts@googlegroups.com>"
