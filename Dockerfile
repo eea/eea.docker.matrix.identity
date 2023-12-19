@@ -2,8 +2,8 @@ FROM openjdk:8-jre-alpine AS builder
 
 RUN apk update && apk add gradle git && rm -rf /var/lib/apk/* /var/cache/apk/*
 
-WORKDIR /ma1sd
-RUN git clone -b 2.5.0-eea https://github.com/eea/ma1sd.git \
+RUN git clone -b 2.5.0-eea https://github.com/eea/ma1sd.git /ma1sd \
+  && cd /ma1sd \
   && ./gradlew shadowJar
 
 FROM openjdk:8-jre-alpine
